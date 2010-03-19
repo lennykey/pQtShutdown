@@ -1,0 +1,5 @@
+Hier soll ein Programm entstehen, welches auf das Konsolenprogramm Shutdown zugreift
+und mit Hilfe einer QT-Oberfläche verschiedene Einstellungen vorgenommen werden können. 
+
+Erstes Ziel soll sein, das mit Hilfe des Programms der Computer nach einer gewissen Zeit
+heruntergefahren wird.
