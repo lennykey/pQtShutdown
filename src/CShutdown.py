@@ -1,9 +1,5 @@
 ''' Klasse zur Ausfuehrung des Shutdownbefehls '''
-
-
 import os
-
-
 
 class Shutdown(object):
     
@@ -18,22 +14,20 @@ class Shutdown(object):
         
         
         
-    def startShutdown(self, option, minuten, passwort):
+    def startShutdown(self, option, minuten):
         self.__option= option
         self.__minuten= minuten
-        
-        passwortUebergabe= 'echo ' + passwort + ' | '
-        superuserDo= 'sudo -S'
         command= 'shutdown'
-        
-        
-        os.system(passwortUebergabe + superuserDo+ ' ' + command + ' ' + self.__option + ' ' + self.__minuten+'&')
-        #print passwortUebergabe + superuserDo+ ' ' + command + ' ' + self.__option + ' ' + self.__minuten
+
+        os.system(command + ' ' + self.__option + ' ' + self.__minuten + '&')
     
-    def stopShutdown(self, mitteilung, passwort):
+    
+    def stopShutdown(self, mitteilung):
         self.__mitteilung= mitteilung
+        command= 'shutdown'
+        option= '-c'
         
-        os.system('echo ' + passwort + ' |'+ 'sudo -S shutdown -c' + ' ' + self.__mitteilung)
+        os.system(command + ' ' + option + ' ' + self.__mitteilung + '&')
         
         
         
