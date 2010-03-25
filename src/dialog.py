@@ -26,6 +26,7 @@ class Ui_Dialog(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.spinBox = QtGui.QSpinBox(self.layoutWidget)
         self.spinBox.setObjectName("spinBox")
+        self.spinBox.setRange(0, 1000000)
         self.horizontalLayout.addWidget(self.spinBox)
         self.pbShutdown = QtGui.QPushButton(self.layoutWidget)
         self.pbShutdown.setObjectName("pbShutdown")
